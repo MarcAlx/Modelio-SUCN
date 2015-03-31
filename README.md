@@ -10,6 +10,12 @@ Documentation used :
 - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
 - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
+Authors
+--------------
+Group225 from IDM at UFRIM2AG
+- (MBD) Marc-Alexandre Blanchard
+- (EKA) Enis Kulla 
+
 Code 
 --------------
 Code is located inside 'macros' folder
