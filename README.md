@@ -71,6 +71,10 @@ Grammar
 | comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
 +--------------------------------------------------+------------------------------------------------+---------------------+
 ```
+NB : Actors and Usecases are dynamically created as they are declared, if they are not create via 
+```
+'actor <actor-name>'  or 'usecase <usecase-ame>'
+```
 
 SUCN import testcases
 --------------
