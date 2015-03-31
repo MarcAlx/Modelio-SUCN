@@ -55,7 +55,7 @@ Grammar
 +--------------------------------------------------+------------------------------------------------+---------------------+
 ```
 
-SUCN import testcase
+SUCN import testcases
 --------------
 Some test case are provided as .sucn file :
 - actor_creation.scn -> actor creation
