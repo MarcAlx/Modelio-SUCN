@@ -7,9 +7,8 @@ SUCN - スケン
 
 This code convert SUCN text to USE case in modelio
 Documentation used :
-    - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
-    - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
-
+- http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
+- https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
 Usage - Modelio setup
 --------------
@@ -21,9 +20,9 @@ Usage - Modelio setup
 
 Usage - import .sucn file
 --------------
-- user click on import
+- click on import
 - a filechooser open 
-- user choose a file ( a SUCN file )
+- choose a file ( a SUCN file )
 - the module create a package named 'SUCN Package' in this package
 - the module create a use case diagram in order to allow drag n drop of the created elements
 - the module parse the file and create the elements
@@ -55,4 +54,17 @@ Grammar
 | comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
 +--------------------------------------------------+------------------------------------------------+---------------------+
 ```
+
+SUCN import testcase
+--------------
+Some test case are provided as .sucn file :
+- actor_creation.scn -> actor creation
+- actor_extension.sucn -> actor extension
+- actor_usecase_link.sucn -> actor link to a usecase
+- comment.sucn -> comment
+- test.sucn -> a simple test
+- usecase_creation.sucn -> usecase creation
+- usecase_extension.sucn -> usecase extends another useace
+- usecase_inclusion.sucn -> usecase includes antoher usecase
+- usecases_link.sucn -> usecase is link to another usecase
 
