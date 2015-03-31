@@ -10,6 +10,10 @@ Documentation used :
 - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
 - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
+Requirements
+--------------
+- Modelio 3.2
+
 Authors
 --------------
 Group225 from IDM at UFRIM2AG
