@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="usecases" version="3">
+  <DEPS>
+    <ID name="usecases" mc="Package" uid="2043742e-8fc9-4579-aeaf-f27b20628a52"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="38a658f8-7477-4b30-8ea3-73260fe7835d"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="usecases" mc="Package" uid="2043742e-8fc9-4579-aeaf-f27b20628a52"/>
+    <PID name="UseCases" mc="Project" uid="fb0ea310-78f9-4236-8e6a-aa79559e7ae5"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[usecases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="38a658f8-7477-4b30-8ea3-73260fe7835d"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

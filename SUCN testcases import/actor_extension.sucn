@@ -1,0 +1,2 @@
+--actor A2 extends A1 
+A1 -isparentof- A2

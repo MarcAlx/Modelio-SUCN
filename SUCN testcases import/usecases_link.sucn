@@ -1,0 +1,2 @@
+--usecase1 UC1 is linked to usecase2 with communication link
+UC1 -islinkedto- uC2

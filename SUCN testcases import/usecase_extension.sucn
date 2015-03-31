@@ -1,0 +1,4 @@
+--usecase uc1 extends usecase UC2, 
+--as both UC1 and UC2 are not created with 'usecase UC1'
+--UC1 and UC2 are dynamically created
+NameUC1 -extends- NameUC2

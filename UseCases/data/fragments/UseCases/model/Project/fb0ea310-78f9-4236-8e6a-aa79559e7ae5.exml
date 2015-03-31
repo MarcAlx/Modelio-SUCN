@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="UseCases" version="3">
+  <DEPS>
+    <ID name="UseCases" mc="Project" uid="fb0ea310-78f9-4236-8e6a-aa79559e7ae5"/>
+    <COMPID name="UseCases" mc="DiagramSet" uid="dbc8881e-e103-49c2-9fd5-0d9871ab7423"/>
+    <COMPID name="usecases" mc="Package" uid="2043742e-8fc9-4579-aeaf-f27b20628a52"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="UseCases" mc="Project" uid="fb0ea310-78f9-4236-8e6a-aa79559e7ae5"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[UseCases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="UseCases" mc="DiagramSet" uid="dbc8881e-e103-49c2-9fd5-0d9871ab7423"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="usecases" mc="Package" uid="2043742e-8fc9-4579-aeaf-f27b20628a52"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

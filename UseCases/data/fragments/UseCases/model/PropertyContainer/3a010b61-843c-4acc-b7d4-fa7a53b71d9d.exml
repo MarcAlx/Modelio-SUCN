@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="UseCases" version="3">
+  <DEPS>
+    <ID name="UseCases" mc="PropertyContainer" uid="3a010b61-843c-4acc-b7d4-fa7a53b71d9d"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="UseCases" mc="PropertyContainer" uid="3a010b61-843c-4acc-b7d4-fa7a53b71d9d"/>
+    <PID name="UseCases" mc="AnalystProject" uid="5db2eaff-cdc3-4e25-88b3-91ee4d98727a"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[UseCases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>
