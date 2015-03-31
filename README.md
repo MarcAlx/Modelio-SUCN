@@ -10,6 +10,14 @@ Documentation used :
 - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
 - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
+Code 
+--------------
+Code is located inside 'macros' folder
+in files :
+- import.py for import
+- export.py for export
+- .catalog for menu configuration
+
 Usage - Modelio setup
 --------------
 - Launch Modelio
