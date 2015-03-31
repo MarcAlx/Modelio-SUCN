@@ -11,17 +11,32 @@ Documentation used :
     - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
 
-Usage
+Usage - Modelio setup
 --------------
-1 - user click on import
-2 - a filechooser open 
-3 - user choose a file ( a SUCN file )
-4 - the module create a package named 'SUCN Package' in this package
-5 - the module create a use case diagram in order to allow drag n drop of the created elements
-6 - the module parse the file and create the elements
+- Launch Modelio
+- File menu -> switch workspace
+- Choose 'Modelio-SUCN' folder
+- Relaunch Modelio (in order to have access to menu)
+- Open UseCases project
+
+Usage - import .sucn file
+--------------
+- user click on import
+- a filechooser open 
+- user choose a file ( a SUCN file )
+- the module create a package named 'SUCN Package' in this package
+- the module create a use case diagram in order to allow drag n drop of the created elements
+- the module parse the file and create the elements
+
+Usage - export .sucn file
+--------------
+- Create a use case diagram via modelio
+- Select the package that contains the diagram
+- client on export
 
 Grammar
 --------------
+```
 +---------------------Purpose----------------------+--------------------Grammar---------------------+-------Example-------+
 | actor creation                                   | 'actor <actor-name>'                           | actor A1            |
 +--------------------------------------------------+------------------------------------------------+---------------------+
@@ -39,3 +54,5 @@ Grammar
 +--------------------------------------------------+------------------------------------------------+---------------------+
 | comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
 +--------------------------------------------------+------------------------------------------------+---------------------+
+```
+
