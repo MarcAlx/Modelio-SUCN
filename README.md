@@ -31,7 +31,7 @@ Usage - export .sucn file
 --------------
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
-- client on export
+- clic on export
 
 Grammar
 --------------
