@@ -79,7 +79,7 @@ NB : Actors and Usecases are dynamically created as they are declared, if they a
 
 SUCN import testcases
 --------------
-Some test case are provided as .sucn file :
+Some testcases are provided as .sucn files in folder 'SUCN testcases import':
 - actor_creation.scn -> actor creation
 - actor_extension.sucn -> actor extension
 - actor_usecase_link.sucn -> actor link to a usecase
