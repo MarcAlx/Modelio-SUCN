@@ -38,18 +38,18 @@ Usage - Modelio setup
 
 Usage - import .sucn file
 --------------
-- click on import
-- a filechooser open 
-- choose a file ( a SUCN file )
-- the module create a package named 'SUCN Package' in this package
-- the module create a use case diagram in order to allow drag n drop of the created elements
-- the module parse the file and create the elements
+- Click on import
+- A filechooser open 
+- Choose a file ( a SUCN file )
+- The module creates a package named 'SUCN Package' in this package
+- The module creates a use case diagram in order to allow drag n drop of the created elements
+- The module parses the file and create the elements
 
 Usage - export .sucn file
 --------------
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
-- clic on export
+- Clic on export
 
 Grammar
 --------------
