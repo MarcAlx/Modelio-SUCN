@@ -71,7 +71,7 @@ Grammar
 | comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
 +--------------------------------------------------+------------------------------------------------+---------------------+
 ```
-NB : Actors and Usecases are dynamically created as they are declared, if they are not create via 
+NB : Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
 'actor <actor-name>'  or 'usecase <usecase-ame>'
 ```
