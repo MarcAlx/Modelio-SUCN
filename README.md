@@ -57,7 +57,7 @@ Grammar
 
 SUCN import testcase
 --------------
-Some test case are provide as .sucn file :
+Some test case are provided as .sucn file :
 - actor_creation.scn -> actor creation
 - actor_extension.sucn -> actor extension
 - actor_usecase_link.sucn -> actor link to a usecase
