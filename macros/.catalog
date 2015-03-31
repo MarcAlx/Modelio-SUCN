@@ -8,7 +8,4 @@
 <script name="Generate OCL" path="GenOCL.py" icon-path="" show-menu="false" show-toolbar="true">
 <description></description>
 </script>
-<script name="CoExplorer" path="CoExplorer.py" icon-path="" show-menu="true" show-toolbar="true">
-<description></description>
-</script>
 </catalog>
