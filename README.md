@@ -5,8 +5,7 @@ Simple UseCase Notation for Modelio
 
 SUCN - スケン
 
-This code convert SUCN text to usecase in modelio
-Documentation used :
+This code convert SUCN text to usecase in modelio, documentation used :
 - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
 - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 
