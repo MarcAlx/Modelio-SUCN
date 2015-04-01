@@ -81,7 +81,7 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 
 NB : Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
-'actor <actor-name>'  or 'usecase <usecase-ame>'
+'actor (actor-name)'  or 'usecase (usecase-ame)'
 ```
 
 ##9. SUCN import testcases
