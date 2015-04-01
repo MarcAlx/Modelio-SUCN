@@ -2,7 +2,7 @@
 
 ##0. Base project
 This project is based on :
-- https://github.com/megaplanet/Modelio3WorkspaceGenOCL-G99
+- https://github.com/megaplanet/Modelio3WorkspaceGenOCL-G99 by https://github.com/megaplanet
 
 ##1. Simple UseCase Notation for Modelio
 
@@ -81,7 +81,7 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 
 NB : Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
-'actor (actor-name)'  or 'usecase (usecase-ame)'
+'actor (actor-name)'  or 'usecase (usecase-name)'
 ```
 
 ##9. SUCN import testcases
