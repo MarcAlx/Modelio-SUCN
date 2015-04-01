@@ -31,6 +31,8 @@ Warning : do not press 'Import' before project selection. If you do this you wil
 - Choose 'Modelio-SUCN' folder
 - Relaunch Modelio (in order to have access to menu)
 - Open 'UseCases' project or create a new one
+- Use menu to do work with modules : 'Import' or 'Export selected package to .sucn file'
+- ![alt text](screenshots/menu.png "menu screenshot")
 
 The workspace cames with a project called 'UseCases' you can use it or create your own project. 
 
@@ -38,14 +40,17 @@ When you make an import procedure a package called 'SUCN Package' will be create
 
 ##6. Usage - import
 - Click on import, a window will open
+- ![alt text](screenshots/mw.png "mainwindow screenshot")
+
 In this window you will have to way of translation :
--Import a file
--Write SUCN instructions in textarea
+- Import a file
+- Write SUCN instructions in textarea
 
 ###6.1 Import a file
 /!\ all existing content inside 'SUCN Package' will be deleted
 - Press 'import .sucn file button'
 - Choose a .sucn file (extension must be .sucn)
+- ![alt text](screenshots/fd.png "filedialog sreenshot")
 
 ###6.2 Write SUCN instructions
 /!\ all existing content inside 'SUCN Package' will be deleted
