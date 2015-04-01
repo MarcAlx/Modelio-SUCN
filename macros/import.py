@@ -3,20 +3,6 @@
 
     SUCN - スケン
 
-    This code convert SUCN text to USE case in modelio
-    Documentation used :
-        - http://modelioscribes.readthedocs.org/en/latest/UseCaseScribe.html
-        - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
-
-
-    Usage : 
-        1 - user click on import
-        2 - a filechooser open 
-        3 - user choose a file ( a SUCN file )
-        4 - the module create a package named 'SUCN Package' in this package
-        5 - the module create a use case diagram in order to allow drag n drop of the created elements
-        6 - the module parse the file and create the elements
-
     Grammar :
         +---------------------Purpose----------------------+--------------------Grammar---------------------+-------Example-------+
         | actor creation                                   | 'actor <actor-name>'                           | actor A1            |
@@ -78,7 +64,6 @@ class FileImporterModule(object):
     """
         Import a SUCN file then translate it
     """
-
     __Version,__Name=1.0,"SUCN file importer to Modelio"
     __default_transaction_name = "import from SUCN file"
 
@@ -98,6 +83,7 @@ class FileImporterModule(object):
         filename = self.askFile()
         if(filename!=None):
             fileContent = self.fileToList(filename)
+            self.__utils.create_or_clean_base_package()
             self.__translator.make_translate_transaction(self.__default_transaction_name,fileContent)
 
     def fileToList(self,path):
@@ -115,6 +101,8 @@ class FileImporterModule(object):
             ask for a file return full path or None
         """
         fd = FileDialog(Shell(), SWT.OPEN);
+        fd.text="Choose a .sucn file to import"
+        fd.filterExtensions=["*.sucn"]
         filename = fd.open()
         return filename
 
@@ -133,25 +121,36 @@ class Utils(object):
             """
                 create or clean the working package
             """
-
-            create=True
-            #grab the project
-            for e in self.__UML_factory.getModelRoots():
-                if isinstance(e,Project):
-                    #search if package exist in it
-                    for element in e.getModel().getOwnedElement():
-                        #if package exist delete everything in it
-                        if isinstance(element,Package) and element.getName()==self.__package_name:
-                            element.delete()
-                            #create a package
+            #begin a transaction
+            trans = theSession().createTransaction("cleaning package")
+            try:
+                create=True
+                #grab the project
+                for e in self.__UML_factory.getModelRoots():
+                    if isinstance(e,Project):
+                        #search if package exist in it
+                        for element in e.getModel().getOwnedElement():
+                            #if package exist delete everything in it
+                            if isinstance(element,Package) and element.getName()==self.__package_name:
+                                #store element in order to delete them
+                                #this loop is odd but a single clean seams to not be enough
+                                while(len(element.getOwnedElement())>0):
+                                    todel = []
+                                    for de in element.getOwnedElement():
+                                        todel.append(de) 
+                                    #delete element in this loop as the previous one is based on a java iterator
+                                    for lmt in todel:
+                                        todel.pop().delete()
+                                create=False                   
+                        #create a package
+                        if create:
                             self.__UML_factory.createPackage(self.__package_name,e.getModel())
-                            create=False
-                    
-                    #create a package
-                    if create:
-                        self.__UML_factory.createPackage(self.__package_name,e.getModel())
-                        #create use case diagram in order to see how what it produce
-                        self.__UML_factory.createUseCaseDiagram(self.__usecase_diagram_name,e.getModel(),None)
+                            #create use case diagram in order to see how what it produce
+                            self.__UML_factory.createUseCaseDiagram(self.__usecase_diagram_name,e.getModel(),None)
+                trans.commit()
+            except:
+                trans.rollback()
+                raise
 
     def get_package_name(self):
         return self.__package_name
@@ -170,6 +169,9 @@ class Translator(object):
         """
             create transaction and make the translation inside it
         """
+        #clean content before translation
+        self.__modelio_factory.clean_content()
+        #begin translation
         trans = theSession().createTransaction(transaction_name) 
         try:
             self.__translate(SUCNAsList)
@@ -284,8 +286,87 @@ class ModelioFactory(object):
         self.__actors   = {}
         self.__usecases = {}
 
+class MainWindow(object):
+
+    __TITLE = "SUCN translator"
+    __WINDOW_SIZE = (250,450)
+    __OPACITY = 240
+
+    def __init__(self):
+        self.__utils       = Utils(theUMLFactory())
+        self.__utils.create_or_clean_base_package()
+        self.__res_package = instanceNamed(Package,self.__utils.get_package_name())
+        self.__tr = Translator(theUMLFactory(),self.__res_package)
+        self.__fi = FileImporterModule()
+        self.build_GUI()
+        
+    def build_GUI(self):
+        """
+            build main window UI
+        """
+        self.shell = Shell(SWT.CLOSE)
+        self.shell.size = self.__WINDOW_SIZE
+        self.shell.minimumSize = self.__WINDOW_SIZE
+        self.shell.setLayout (None)
+        self.shell.text=self.__TITLE
+        self.shell.alpha=self.__OPACITY
+
+        self.button_import = Button(self.shell,SWT.PUSH,text="import .sucn file",widgetSelected = self.on_import_click)
+        self.button_import.location = (10,5)
+        self.button_import.size = (230,40)
+        
+        self.label = Label(self.shell,SWT.SINGLE)
+        self.label.text="Enter SUCN text here :"
+        self.label.location=(10,50)
+        self.label.size=(230,30)
+
+        self.input = Text(self.shell,SWT.MULTI)
+        self.input.location=(10,70)
+        self.input.size=(230,300)
+        self.input.text="--add SUCN instruction bellow\n--one instruction by line"
+        
+        self.button_translate = Button(self.shell,SWT.PUSH,text="Translate",widgetSelected = self.on_translate_click)
+        self.button_translate.location = (10,380)
+        self.button_translate.size = (115,40)
+
+        self.button_save = Button(self.shell,SWT.PUSH,text="Save as .sucn",widgetSelected = self.on_save_click)
+        self.button_save.location = (124,380)
+        self.button_save.size = (115,40)
+
+        self.shell.open()
+
+    def on_translate_click(self,event):
+        """
+            called on translate button click
+        """
+        input_lines = re.split("\n+",self.input.text)
+        self.__utils.create_or_clean_base_package()
+        self.__tr.make_translate_transaction("import from SUCN user input",input_lines)
+
+    def on_save_click(self,event):
+        """
+            called on save button click
+        """
+        fd = FileDialog(Shell(), SWT.SAVE);
+        filename = fd.open()
+        if(filename!=None):
+            #check filename
+            if not re.match(".*\.sucn", filename):
+                filename+=".sucn"
+            #save
+            f = open(filename,"w")
+            input_lines = re.split("\n+",self.input.text)
+            for line in input_lines:
+                f.write(line+"\n")
+            f.close()
+    
+    def on_import_click(self,event):
+        """
+            called on import button click
+        """
+        self.__fi.import_SUCN()    
+
 """
     launching of the module
 """
-fi = FileImporterModule()
-fi.import_SUCN()
+m = MainWindow()
