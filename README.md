@@ -97,6 +97,7 @@ Some testcases are provided as .sucn files in folder 'SUCN testcases import':
 - usecases_link.sucn -> usecase is link to another usecase
 
 ##10. Screenshot
-![alt text](screenshots/sample1.png "sample 1")
+- A translatation via user input :
+- ![alt text](screenshots/sample1.png "sample 1")
 
 
