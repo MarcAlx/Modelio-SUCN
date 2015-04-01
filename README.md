@@ -47,16 +47,16 @@ In this window you will have to way of translation :
 - Write SUCN instructions in textarea
 
 ###6.1 Import a file
-/!\ all existing content inside 'SUCN Package' will be deleted
+**/!\ all existing content inside 'SUCN Package' will be deleted**
 - Press 'import .sucn file button'
 - Choose a .sucn file (extension must be .sucn)
 - ![alt text](screenshots/fd.png "filedialog sreenshot")
 
 ###6.2 Write SUCN instructions
-/!\ all existing content inside 'SUCN Package' will be deleted
-- Write code inside textarea
+**/!\ all existing content inside 'SUCN Package' will be deleted**
+- Write code inside textarea (one instruction a line)
 - Then press 'translate'
-NB : You can also save you inputs in order to use it later via 'save as .sucn' button
+NB : You can also save your inputs in order to use it later via 'save as .sucn' button
 
 ##7. Usage - export .sucn file
 - Create a use case diagram via modelio
