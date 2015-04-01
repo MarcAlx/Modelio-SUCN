@@ -1,5 +1,9 @@
 #Modelio-SUCN
 
+##0. Base project
+This project is based on :
+- https://github.com/megaplanet/Modelio3WorkspaceGenOCL-G99
+
 ##1. Simple UseCase Notation for Modelio
 
 SUCN - スケン
