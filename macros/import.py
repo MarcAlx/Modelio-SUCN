@@ -320,7 +320,7 @@ class MainWindow(object):
         self.label.location=(10,50)
         self.label.size=(230,30)
 
-        self.input = Text(self.shell,SWT.MULTI)
+        self.input = Text(self.shell,SWT.MULTI|SWT.V_SCROLL)
         self.input.location=(10,70)
         self.input.size=(230,300)
         self.input.text="--add SUCN instruction bellow\n--one instruction by line"
