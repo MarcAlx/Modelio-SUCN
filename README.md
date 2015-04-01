@@ -64,25 +64,17 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 - Clic on export
 
 ##8. Grammar
-```
-+---------------------Purpose----------------------+--------------------Grammar---------------------+-------Example-------+
-| actor creation                                   | 'actor <actor-name>'                           | actor A1            |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| actor inheritance                                | '<actorA-name> -isparentof- <actorB-name>'     | A1 -isparentof- A2  |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| actor uses a usecase        (communication link) | '<actor-name> -uses- <usecase-name>'           | A1 -uses- U2        |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| usecase linked to a usecase (communication link) | '<usecase-name> -islinkedto- <usecase-name>'   | U1 -islinkedto- U2  |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| usecase creation                                 | 'usecase <usecase-ame>'                        | usecase U1          |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| usecase inclusion                                | '<usecase-name> -includes- <usecase-name>'     | U1 -includes- U2    |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| usecase inheritance                              | '<usecase-name> -extends- <usecase-name>'      | U1 -extends- U2     |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-| comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
-+--------------------------------------------------+------------------------------------------------+---------------------+
-```
+| Purpose                                          | Grammar                                        | Example             |
+|--------------------------------------------------|------------------------------------------------|---------------------|
+| actor creation                                   | actor (actor-name)                             | actor A1            |
+| actor inheritance                                | (actorA-name) -isparentof- (actorB-name)       | A1 -isparentof- A2  |
+| actor uses a usecase        (communication link) | (actor-name) -uses- (usecase-name)             | A1 -uses- U2        |
+| usecase linked to a usecase (communication link) | (usecase-name) -islinkedto- (usecase-name)     | U1 -islinkedto- U2  |
+| usecase creation                                 | usecase (usecase-ame)                          | usecase U1          |
+| usecase inclusion                                | (usecase-name) -includes- (usecase-name)       | U1 -includes- U2    |
+| usecase inheritance                              | (usecase-name) -extends- (usecase-name)        | U1 -extends- U2     |
+| comments ((inside code) not processed)           | --(comment-text)                               | --a comment         |
+
 NB : Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
 'actor <actor-name>'  or 'usecase <usecase-ame>'
