@@ -46,7 +46,7 @@ When you make an import procedure a package called 'SUCN Package' will be create
 - Click on import, a window will open
 - ![alt text](screenshots/mw.png "mainwindow screenshot")
 
-In this window you will have to way of translation :
+In this window you will have two ways of translation :
 - Import a file
 - Write SUCN instructions in textarea
 
