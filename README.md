@@ -35,7 +35,7 @@ Warning : do not press 'Import' before project selection. If you do this you wil
 - Choose 'Modelio-SUCN' folder
 - Relaunch Modelio (in order to have access to menu)
 - Open 'UseCases' project or create a new one
-- Use menu to do work with modules : 'Import' or 'Export selected package to .sucn file'
+- Use menu to work with modules : 'Import' or 'Export selected package to .sucn file'
 - ![alt text](screenshots/menu.png "menu screenshot")
 
 The workspace cames with a project called 'UseCases' you can use it or create your own project. 
