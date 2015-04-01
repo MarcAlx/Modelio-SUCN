@@ -1,7 +1,6 @@
-Modelio-SUCN
-==============
-Simple UseCase Notation for Modelio
---------------
+#Modelio-SUCN
+
+##1. Simple UseCase Notation for Modelio
 
 SUCN - スケン
 
@@ -10,49 +9,56 @@ This code converts SUCN text to usecase in modelio, documentation used :
 - https://www.modelio.org/documentation/javadoc-3.1/org/modelio/api/model/IUmlModel.html
 - https://gist.github.com/megaplanet/9815128
 
-Requirements
---------------
+##2. Requirements
 - Modelio 3.2
 
-Authors
---------------
+##3. Authors
 Group225 from IDM at UFRIM2AG
 - (MBD) Marc-Alexandre Blanchard
 - (EKA) Enis Kulla 
 
-Code 
---------------
+##4. Code 
 Code is located inside 'macros' folder
 in files :
 - import.py for import
 - export.py for export
 - .catalog for menu configuration
 
-Usage - Modelio setup
---------------
+##5. Usage - Modelio setup
+Warning : do not press 'Import' before project selection. If you do this you will get an exception and you won't be able to import SUCN unless you restart Modelio
 - Launch Modelio
 - File menu -> switch workspace
 - Choose 'Modelio-SUCN' folder
 - Relaunch Modelio (in order to have access to menu)
-- Open UseCases project
+- Open 'UseCases' project or create a new one
 
-Usage - import .sucn file
---------------
-- Click on import
-- A filechooser open 
-- Choose a file ( a SUCN file )
-- The module creates a package named 'SUCN Package' in this package
-- The module creates a use case diagram in order to allow drag n drop of the created elements
-- The module parses the file and create the elements
+The workspace cames with a project called 'UseCases' you can use it or create your own project. 
 
-Usage - export .sucn file
---------------
+When you make an import procedure a package called 'SUCN Package' will be created, the module also creates a use case diagram in order to allow drag n drop of the created elements in order to visualize results.
+
+##6. Usage - import
+- Click on import, a window will open
+In this window you will have to way of translation :
+-Import a file
+-Write SUCN instructions in textarea
+
+###6.1 Import a file
+/!\ all existing content inside 'SUCN Package' will be deleted
+- Press 'import .sucn file button'
+- Choose a .sucn file (extension must be .sucn)
+
+###6.2 Write SUCN instructions
+/!\ all existing content inside 'SUCN Package' will be deleted
+- Write code inside textarea
+- Then press 'translate'
+NB : You can also save you inputs in order to use it later via 'save as .sucn' button
+
+##7. Usage - export .sucn file
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
 - Clic on export
 
-Grammar
---------------
+##8. Grammar
 ```
 +---------------------Purpose----------------------+--------------------Grammar---------------------+-------Example-------+
 | actor creation                                   | 'actor <actor-name>'                           | actor A1            |
@@ -77,8 +83,7 @@ NB : Actors and Usecases are dynamically created as they are declared, if they a
 'actor <actor-name>'  or 'usecase <usecase-ame>'
 ```
 
-SUCN import testcases
---------------
+##9. SUCN import testcases
 Some testcases are provided as .sucn files in folder 'SUCN testcases import':
 - actor_creation.scn -> actor creation
 - actor_extension.sucn -> actor extension
