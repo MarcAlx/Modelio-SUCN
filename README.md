@@ -14,7 +14,7 @@ This code converts SUCN text to usecase in modelio, documentation used :
 - https://gist.github.com/megaplanet/9815128
 
 ##2. Requirements
-- Modelio 3.2
+- Modelio 3.2.1
 
 ##3. Authors
 Group225 from IDM at UFRIM2AG
