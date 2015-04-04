@@ -1,4 +1,7 @@
 #Modelio-SUCN
+SUCN stands for Simple Use Case Notation. It's a simple language made to improve usecases understanding and creation. The project is bundled as a module for Modelio 3.2 and it allows :
+- the creation of usecases via SUCN
+- the translation of existing usecases inside Modelio into SUCN.
 
 ##0. Base project
 This project is based on :
