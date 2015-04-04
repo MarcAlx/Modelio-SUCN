@@ -32,7 +32,7 @@ in files :
 - .catalog for menu configuration
 
 ##5. Usage - Modelio setup
-Warning : do not press 'Import' before project selection. If you do this you will get an exception and you won't be able to import SUCN unless you restart Modelio
+**/!\ do not press 'Import' before project selection. If you do this you will get an exception and you won't be able to import SUCN unless you restart Modelio**
 - Launch Modelio
 - File menu -> switch workspace
 - Choose 'Modelio-SUCN' folder
