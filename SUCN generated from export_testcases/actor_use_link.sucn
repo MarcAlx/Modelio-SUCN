@@ -1,0 +1,10 @@
+actor Actor
+ 
+usecase UseCase
+usecase UseCase1
+ 
+ 
+Actor -uses- UseCase
+Actor -uses- UseCase1
+ 
+ 

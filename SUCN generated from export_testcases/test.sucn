@@ -1,0 +1,20 @@
+actor Actor1
+actor Actor
+actor Actor2
+ 
+usecase UseCase2
+usecase UseCase
+usecase UseCase1
+usecase UseCase3
+ 
+Actor -isparentof- Actor1
+Actor -isparentof- Actor2
+ 
+Actor -uses- UseCase
+Actor2 -uses- UseCase1
+ 
+UseCase -islinkedto- UseCase3
+ 
+UseCase -includes- UseCase2
+UseCase -includes- UseCase1
+UseCase2 -extends- UseCase1

@@ -6,7 +6,41 @@
     export
 """
 
+"""
+    The following part of the code came from coExplorer, it's here to avoid the loading of coExplorer by the user
+    it's needed to use theUMLFactory
+"""
+try:
+    from org.modelio.api.modelio import Modelio
+    orgVersion = True
+except:
+    orgVersion = False
+
 import os
+import sys 
+
+WORKSPACE_DIRECTORY=Modelio.getInstance().getContext().getWorkspacePath().toString()
+if orgVersion:
+    MACROS_DIRECTORY=os.path.join(WORKSPACE_DIRECTORY,'macros')
+else:
+    MACROS_DIRECTORY=os.path.join(WORKSPACE_DIRECTORY,'.config','macros')
+
+SCRIPT_LIBRARY_DIRECTORY=os.path.join(MACROS_DIRECTORY,'lib')
+sys.path.extend([MACROS_DIRECTORY,SCRIPT_LIBRARY_DIRECTORY])
+
+from misc import *
+from modelioscriptor import *
+from introspection import *
+"""
+    end coExplorer import
+"""
+
+#lib import
+import re
+
+#gui import
+from org.eclipse.swt.widgets import Shell
+from org.eclipse.jface.dialogs import MessageDialog
 from org.eclipse.swt.widgets import FileDialog
 
 class Exporter(object):
@@ -155,7 +189,6 @@ def main():
         called at launch
     """
     e = Exporter()
-    from org.eclipse.jface.dialogs import MessageDialog
     if len(selectedElements)!=1 or not isinstance(selectedElements[0],Package):
         MessageDialog.openWarning(Shell(), "Warning", "You must select one package !")
     else:

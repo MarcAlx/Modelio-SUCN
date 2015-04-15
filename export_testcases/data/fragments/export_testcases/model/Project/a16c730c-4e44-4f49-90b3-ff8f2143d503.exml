@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="export_testcases" version="3">
+  <DEPS>
+    <ID name="export_testcases" mc="Project" uid="a16c730c-4e44-4f49-90b3-ff8f2143d503"/>
+    <COMPID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <COMPID name="export_testcases" mc="DiagramSet" uid="79e4c362-8823-4ea2-a0c1-67d37d55c669"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="export_testcases" mc="Project" uid="a16c730c-4e44-4f49-90b3-ff8f2143d503"/>
+    <ATTRIBUTES>
+      <ATT name="ProjectContext"></ATT>
+      <ATT name="ProjectDescr"></ATT>
+      <ATT name="Name"><![CDATA[export_testcases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="DiagramRoot">
+        <COMPID name="export_testcases" mc="DiagramSet" uid="79e4c362-8823-4ea2-a0c1-67d37d55c669"/>
+      </COMP>
+      <COMP relation="Model">
+        <COMPID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

@@ -1,0 +1,25 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="export_testcases" version="3">
+  <DEPS>
+    <ID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <COMPID name="overview diagram" mc="ClassDiagram" uid="23d150d2-dde6-4518-b81c-59be42c82a77"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <PID name="export_testcases" mc="Project" uid="a16c730c-4e44-4f49-90b3-ff8f2143d503"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[export_testcases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Product">
+        <COMPID name="overview diagram" mc="ClassDiagram" uid="23d150d2-dde6-4518-b81c-59be42c82a77"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

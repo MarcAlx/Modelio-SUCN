@@ -1,0 +1,11 @@
+ 
+usecase UseCase
+usecase UseCase1
+usecase UseCase2
+ 
+ 
+ 
+ 
+UseCase -extends- UseCase2
+UseCase -extends- UseCase1
+UseCase2 -extends- UseCase1

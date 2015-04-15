@@ -1,0 +1,10 @@
+actor Actor
+actor Actor1
+actor Actor2
+ 
+ 
+Actor -isparentof- Actor1
+Actor -isparentof- Actor2
+ 
+ 
+ 

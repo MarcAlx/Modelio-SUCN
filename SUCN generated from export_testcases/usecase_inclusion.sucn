@@ -1,0 +1,10 @@
+ 
+usecase UseCase2
+usecase UseCase
+usecase UseCase1
+ 
+ 
+ 
+ 
+UseCase -includes- UseCase2
+UseCase1 -includes- UseCase

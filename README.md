@@ -108,7 +108,7 @@ actor a1 a2
 ```
 
 ##9. SUCN import testcases
-Some testcases are provided as .sucn files in folder 'SUCN testcases import':
+Some import testcases are provided as .sucn files in folder 'SUCN testcases import':
 - actor_creation.scn -> actor creation
 - actor_extension.sucn -> actor extension
 - actor_usecase_link.sucn -> actor link to a usecase
@@ -117,14 +117,27 @@ Some testcases are provided as .sucn files in folder 'SUCN testcases import':
 - usecase_creation.sucn -> usecase creation
 - usecase_extension.sucn -> usecase extends another useace
 - usecase_inclusion.sucn -> usecase includes antoher usecase
-- usecases_link.sucn -> usecase is link to another usecase
+- usecase_link.sucn -> usecase is link to another usecase
 - multiple_uses.sucn -> multiple actor use multiple usecase
 - multiple_isparentof.sucn -> multiple actor are parent of multiple actors
 - multiple_islinkedto.sucn -> multiple usecases are linked to multiple usecases
 - multiple_includes.sucn -> multiple usescases includes multiple usecases
 - multiple_extends.sucn -> multiple usescases extends multiple usecases
 
-##10. Screenshot
+##10. SUCN export testcases
+Some export testcases are provided as a modelio project : 'export-testcases', try export on packages :
+- actor_creation -> actor creation
+- actor_extension -> actor extension
+- actor_usecase_link-> actor link to a usecase
+- usecase_creation -> usecase creation
+- usecase_extension -> usecase extends another useace
+- usecase_inclusion -> usecase includes antoher usecase
+- usecase_link -> usecase is link to another usecase
+- test -> a simple test
+
+NB : .sucn files generated from these testcases are provided as examples inside : 'SUCN generated from export_testcases' folder.
+
+##11. Screenshot
 - A translatation via user input :
 - ![alt text](screenshots/sample1.png "sample 1")
 

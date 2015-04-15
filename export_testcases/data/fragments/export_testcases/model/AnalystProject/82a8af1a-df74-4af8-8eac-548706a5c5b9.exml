@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="export_testcases" version="3">
+  <DEPS>
+    <ID name="export_testcases" mc="AnalystProject" uid="82a8af1a-df74-4af8-8eac-548706a5c5b9"/>
+    <COMPID name="export_testcases" mc="PropertyContainer" uid="41e3c5a8-86df-4fed-8783-d2b3a2523560"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="export_testcases" mc="AnalystProject" uid="82a8af1a-df74-4af8-8eac-548706a5c5b9"/>
+    <ATTRIBUTES>
+      <ATT name="Name"><![CDATA[export_testcases]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="PropertyRoot">
+        <COMPID name="export_testcases" mc="PropertyContainer" uid="41e3c5a8-86df-4fed-8783-d2b3a2523560"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
