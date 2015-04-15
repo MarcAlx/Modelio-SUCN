@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="actor_creation" version="3">
+  <DEPS>
+    <ID name="actor_creation" mc="Package" uid="3989c8a4-9f0e-4c04-9782-50d541012779"/>
+    <COMPID name="Actor" mc="Actor" uid="d043e759-7fc6-44b8-9d36-2ae482db65bd"/>
+    <COMPID name="Actor1" mc="Actor" uid="e839730c-9cf2-4248-b030-150533249190"/>
+    <COMPID name="actor_creation Use Case diagram" mc="UseCaseDiagram" uid="5f8470b3-1908-4170-b4e0-cbd0f6707bf5"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="actor_creation" mc="Package" uid="3989c8a4-9f0e-4c04-9782-50d541012779"/>
+    <PID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[actor_creation]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Actor" mc="Actor" uid="d043e759-7fc6-44b8-9d36-2ae482db65bd"/>
+        <COMPID name="Actor1" mc="Actor" uid="e839730c-9cf2-4248-b030-150533249190"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="actor_creation Use Case diagram" mc="UseCaseDiagram" uid="5f8470b3-1908-4170-b4e0-cbd0f6707bf5"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

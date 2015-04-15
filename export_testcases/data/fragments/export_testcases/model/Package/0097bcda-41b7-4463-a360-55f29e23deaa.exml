@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="usecase_link" version="3">
+  <DEPS>
+    <ID name="usecase_link" mc="Package" uid="0097bcda-41b7-4463-a360-55f29e23deaa"/>
+    <COMPID name="UseCase" mc="UseCase" uid="7dc5572a-4b07-4779-a117-9eebb0ccc596"/>
+    <COMPID name="UseCase1" mc="UseCase" uid="02f97036-c33c-4ba1-88b1-ff6f6d203b38"/>
+    <COMPID name="UseCase2" mc="UseCase" uid="f82dab88-8623-4b27-8dda-db31809cf05c"/>
+    <COMPID name="usecase_link Use Case diagram" mc="UseCaseDiagram" uid="fbab4c84-e465-442d-a7d7-6a208d79f246"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="usecase_link" mc="Package" uid="0097bcda-41b7-4463-a360-55f29e23deaa"/>
+    <PID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[usecase_link]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="UseCase2" mc="UseCase" uid="f82dab88-8623-4b27-8dda-db31809cf05c"/>
+        <COMPID name="UseCase1" mc="UseCase" uid="02f97036-c33c-4ba1-88b1-ff6f6d203b38"/>
+        <COMPID name="UseCase" mc="UseCase" uid="7dc5572a-4b07-4779-a117-9eebb0ccc596"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="usecase_link Use Case diagram" mc="UseCaseDiagram" uid="fbab4c84-e465-442d-a7d7-6a208d79f246"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

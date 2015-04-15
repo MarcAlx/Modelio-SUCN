@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Actor1" version="3">
+  <DEPS>
+    <ID name="Actor1" mc="Actor" uid="e839730c-9cf2-4248-b030-150533249190"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Actor1" mc="Actor" uid="e839730c-9cf2-4248-b030-150533249190"/>
+    <PID name="actor_creation" mc="Package" uid="3989c8a4-9f0e-4c04-9782-50d541012779"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Actor1]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES></DEPENDENCIES>
+  </OBJECT>
+</EXT>

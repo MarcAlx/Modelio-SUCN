@@ -1,0 +1,38 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="Actor1" version="3">
+  <DEPS>
+    <ID name="Actor1" mc="Actor" uid="e6d80574-08c1-4948-8c7e-09c36170495e"/>
+    <EXTID name="Actor" mc="Actor" uid="055245cb-1e75-4f55-88d5-8651ca98f3ab"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="Actor1" mc="Actor" uid="e6d80574-08c1-4948-8c7e-09c36170495e"/>
+    <PID name="actor_extension" mc="Package" uid="c2ac2649-e9cf-472d-a7b3-a6c0fcddd6ff"/>
+    <ATTRIBUTES>
+      <ATT name="IsElementary">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[Actor1]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="Parent">
+        <OBJECT>
+          <ID name="Generalization" mc="Generalization" uid="941bb8c4-5861-49eb-ad77-b530c1626f58"/>
+          <PID name="Actor1" mc="Actor" uid="e6d80574-08c1-4948-8c7e-09c36170495e"/>
+          <ATTRIBUTES>
+            <ATT name="Discriminator"></ATT>
+            <ATT name="Name"><![CDATA[Generalization]]></ATT>
+            <ATT name="status">1970354901745664</ATT>
+          </ATTRIBUTES>
+          <DEPENDENCIES>
+            <LINK relation="SuperType">
+              <ID name="Actor" mc="Actor" uid="055245cb-1e75-4f55-88d5-8651ca98f3ab"/>
+            </LINK>
+          </DEPENDENCIES>
+        </OBJECT>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

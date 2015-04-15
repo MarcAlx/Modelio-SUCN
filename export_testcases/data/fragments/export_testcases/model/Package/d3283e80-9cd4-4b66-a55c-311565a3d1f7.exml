@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="usecase_creation" version="3">
+  <DEPS>
+    <ID name="usecase_creation" mc="Package" uid="d3283e80-9cd4-4b66-a55c-311565a3d1f7"/>
+    <COMPID name="UseCase" mc="UseCase" uid="eba399f2-0ff0-423f-bb47-84854e323c6d"/>
+    <COMPID name="UseCase1" mc="UseCase" uid="c8fdb1c2-9ce1-4c4b-abaf-9a6078824849"/>
+    <COMPID name="UseCase2" mc="UseCase" uid="5f07e764-d0d3-40b7-b2ad-c7ab3288d12a"/>
+    <COMPID name="usecase_creation Use Case diagram" mc="UseCaseDiagram" uid="65548007-b1c5-4521-8516-d48f7c165673"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="usecase_creation" mc="Package" uid="d3283e80-9cd4-4b66-a55c-311565a3d1f7"/>
+    <PID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[usecase_creation]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="UseCase" mc="UseCase" uid="eba399f2-0ff0-423f-bb47-84854e323c6d"/>
+        <COMPID name="UseCase1" mc="UseCase" uid="c8fdb1c2-9ce1-4c4b-abaf-9a6078824849"/>
+        <COMPID name="UseCase2" mc="UseCase" uid="5f07e764-d0d3-40b7-b2ad-c7ab3288d12a"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="usecase_creation Use Case diagram" mc="UseCaseDiagram" uid="65548007-b1c5-4521-8516-d48f7c165673"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

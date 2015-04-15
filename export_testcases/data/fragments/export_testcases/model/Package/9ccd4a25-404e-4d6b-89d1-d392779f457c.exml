@@ -2,7 +2,15 @@
 <!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="export_testcases" version="3">
   <DEPS>
     <ID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <COMPID name="actor_creation" mc="Package" uid="3989c8a4-9f0e-4c04-9782-50d541012779"/>
+    <COMPID name="actor_extension" mc="Package" uid="c2ac2649-e9cf-472d-a7b3-a6c0fcddd6ff"/>
+    <COMPID name="actor_use_link" mc="Package" uid="f28e9e3c-ca1f-448c-825c-e7f48888cb72"/>
     <COMPID name="overview diagram" mc="ClassDiagram" uid="23d150d2-dde6-4518-b81c-59be42c82a77"/>
+    <COMPID name="test" mc="Package" uid="0d15f5b3-882a-49e1-99c9-58d4bcafbfa6"/>
+    <COMPID name="usecase_creation" mc="Package" uid="d3283e80-9cd4-4b66-a55c-311565a3d1f7"/>
+    <COMPID name="usecase_extension" mc="Package" uid="2a40cbcc-c40c-4c09-9535-f62053be546a"/>
+    <COMPID name="usecase_inclusion" mc="Package" uid="cbb68a48-518c-43e8-a8d9-5c20c1fb2c82"/>
+    <COMPID name="usecase_link" mc="Package" uid="0097bcda-41b7-4463-a360-55f29e23deaa"/>
   </DEPS>
   <OBJECT>
     <ID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
@@ -17,6 +25,16 @@
       <ATT name="status">1970354901745664</ATT>
     </ATTRIBUTES>
     <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="actor_creation" mc="Package" uid="3989c8a4-9f0e-4c04-9782-50d541012779"/>
+        <COMPID name="actor_extension" mc="Package" uid="c2ac2649-e9cf-472d-a7b3-a6c0fcddd6ff"/>
+        <COMPID name="actor_use_link" mc="Package" uid="f28e9e3c-ca1f-448c-825c-e7f48888cb72"/>
+        <COMPID name="usecase_creation" mc="Package" uid="d3283e80-9cd4-4b66-a55c-311565a3d1f7"/>
+        <COMPID name="usecase_extension" mc="Package" uid="2a40cbcc-c40c-4c09-9535-f62053be546a"/>
+        <COMPID name="usecase_inclusion" mc="Package" uid="cbb68a48-518c-43e8-a8d9-5c20c1fb2c82"/>
+        <COMPID name="usecase_link" mc="Package" uid="0097bcda-41b7-4463-a360-55f29e23deaa"/>
+        <COMPID name="test" mc="Package" uid="0d15f5b3-882a-49e1-99c9-58d4bcafbfa6"/>
+      </COMP>
       <COMP relation="Product">
         <COMPID name="overview diagram" mc="ClassDiagram" uid="23d150d2-dde6-4518-b81c-59be42c82a77"/>
       </COMP>

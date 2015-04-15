@@ -1,0 +1,33 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="actor_use_link" version="3">
+  <DEPS>
+    <ID name="actor_use_link" mc="Package" uid="f28e9e3c-ca1f-448c-825c-e7f48888cb72"/>
+    <COMPID name="Actor" mc="Actor" uid="ed09745e-09ac-4fbe-b65e-76db2edfb664"/>
+    <COMPID name="UseCase" mc="UseCase" uid="d5777ca3-acbc-4781-83fd-15d4ab755692"/>
+    <COMPID name="UseCase1" mc="UseCase" uid="f861e96f-3bf5-4485-a445-a72e3bcdd083"/>
+    <COMPID name="actor_use_link Use Case diagram" mc="UseCaseDiagram" uid="0ddef2eb-e1d2-4651-abe3-afb11c1083f7"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="actor_use_link" mc="Package" uid="f28e9e3c-ca1f-448c-825c-e7f48888cb72"/>
+    <PID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[actor_use_link]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Actor" mc="Actor" uid="ed09745e-09ac-4fbe-b65e-76db2edfb664"/>
+        <COMPID name="UseCase" mc="UseCase" uid="d5777ca3-acbc-4781-83fd-15d4ab755692"/>
+        <COMPID name="UseCase1" mc="UseCase" uid="f861e96f-3bf5-4485-a445-a72e3bcdd083"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="actor_use_link Use Case diagram" mc="UseCaseDiagram" uid="0ddef2eb-e1d2-4651-abe3-afb11c1083f7"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>

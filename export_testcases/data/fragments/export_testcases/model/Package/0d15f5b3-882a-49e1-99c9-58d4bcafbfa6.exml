@@ -1,0 +1,41 @@
+<?xml version="1.0" ?>
+<!--GENERATED FILE, PLEASE DO NOT EDIT!!!--><EXT object="test" version="3">
+  <DEPS>
+    <ID name="test" mc="Package" uid="0d15f5b3-882a-49e1-99c9-58d4bcafbfa6"/>
+    <COMPID name="Actor" mc="Actor" uid="014417fe-b569-4d04-b1a3-cc770a5fe52b"/>
+    <COMPID name="Actor1" mc="Actor" uid="c60d8362-fbe3-4526-9a55-1157bb5408a8"/>
+    <COMPID name="Actor2" mc="Actor" uid="4e5bc467-11e0-419b-b94f-933152569c45"/>
+    <COMPID name="UseCase" mc="UseCase" uid="7ff4127a-f7dd-43cb-8df7-40c294d2c80a"/>
+    <COMPID name="UseCase1" mc="UseCase" uid="033d7048-4b0e-43d7-93fb-a420421e2f77"/>
+    <COMPID name="UseCase2" mc="UseCase" uid="eb4c03f0-6de5-4f64-a4fd-43cd7033ded4"/>
+    <COMPID name="UseCase3" mc="UseCase" uid="3b4d504a-9401-4ce4-9516-c6ace943ad4a"/>
+    <COMPID name="test Use Case diagram" mc="UseCaseDiagram" uid="61c82e1e-687e-4bb4-829e-b8b29b5cc9d5"/>
+  </DEPS>
+  <OBJECT>
+    <ID name="test" mc="Package" uid="0d15f5b3-882a-49e1-99c9-58d4bcafbfa6"/>
+    <PID name="export_testcases" mc="Package" uid="9ccd4a25-404e-4d6b-89d1-d392779f457c"/>
+    <ATTRIBUTES>
+      <ATT name="IsInstantiable">false</ATT>
+      <ATT name="IsAbstract">false</ATT>
+      <ATT name="IsLeaf">false</ATT>
+      <ATT name="IsRoot">false</ATT>
+      <ATT name="Visibility">Public</ATT>
+      <ATT name="Name"><![CDATA[test]]></ATT>
+      <ATT name="status">1970354901745664</ATT>
+    </ATTRIBUTES>
+    <DEPENDENCIES>
+      <COMP relation="OwnedElement">
+        <COMPID name="Actor1" mc="Actor" uid="c60d8362-fbe3-4526-9a55-1157bb5408a8"/>
+        <COMPID name="Actor" mc="Actor" uid="014417fe-b569-4d04-b1a3-cc770a5fe52b"/>
+        <COMPID name="UseCase2" mc="UseCase" uid="eb4c03f0-6de5-4f64-a4fd-43cd7033ded4"/>
+        <COMPID name="UseCase" mc="UseCase" uid="7ff4127a-f7dd-43cb-8df7-40c294d2c80a"/>
+        <COMPID name="UseCase1" mc="UseCase" uid="033d7048-4b0e-43d7-93fb-a420421e2f77"/>
+        <COMPID name="Actor2" mc="Actor" uid="4e5bc467-11e0-419b-b94f-933152569c45"/>
+        <COMPID name="UseCase3" mc="UseCase" uid="3b4d504a-9401-4ce4-9516-c6ace943ad4a"/>
+      </COMP>
+      <COMP relation="Product">
+        <COMPID name="test Use Case diagram" mc="UseCaseDiagram" uid="61c82e1e-687e-4bb4-829e-b8b29b5cc9d5"/>
+      </COMP>
+    </DEPENDENCIES>
+  </OBJECT>
+</EXT>
