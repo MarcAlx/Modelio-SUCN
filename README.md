@@ -69,7 +69,7 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
 - Clic on "Export selected package to .sucn file"
-NB : if you select something else than a package or more than one package you will get a pop up like this :
+- NB : if you select something else than a package or more than one package you will get a pop up like this :
 - ![alt text](screenshots/popup.png "pop warning")
 
 ##8. Grammar
