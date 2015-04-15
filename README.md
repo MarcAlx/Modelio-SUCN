@@ -125,7 +125,7 @@ Some import testcases are provided as .sucn files in folder 'SUCN testcases impo
 - multiple_extends.sucn -> multiple usescases extends multiple usecases
 
 ##10. SUCN export testcases
-Some export testcases are provided as a modelio project : 'export-testcases', try export on packages :
+Some export testcases are provided as a modelio project : 'export-testcases', try export on packages :
 - actor_creation -> actor creation
 - actor_extension -> actor extension
 - actor_usecase_link-> actor link to a usecase
