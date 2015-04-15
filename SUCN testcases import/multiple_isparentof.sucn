@@ -1,0 +1,3 @@
+--multiple isparentof
+-- each right part of -isparentof- is parent of all left part of -isparentof-
+a b c -isparentof- d e f

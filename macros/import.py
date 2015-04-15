@@ -3,6 +3,8 @@
 
     SUCN - スケン
 
+    import
+
     Grammar :
         +---------------------Purpose----------------------+--------------------Grammar---------------------+-------Example-------+
         | actor creation                                   | 'actor <actor-name>'                           | actor A1            |
@@ -21,7 +23,9 @@
         +--------------------------------------------------+------------------------------------------------+---------------------+
         | comments ((inside code) not processed)           | '--<comment-text>'                             | --a comment         |
         +--------------------------------------------------+------------------------------------------------+---------------------+
-
+        - a space is needed betweend operands and operator
+        - You can declare multiple actors or usecases where there is (actor-name) or (usecase-name). Just seprarate them by space
+        - Actors and Usecases are dynamically created as they are declared, if they are not created via actor (actor-name) or usecase (usecase-name)
 """
 
 """
@@ -188,37 +192,71 @@ class Translator(object):
             #comments check and chack first in order to not process it as SUCN line
             if re.match("--.*", SUCNLine):
                 pass
+            #split occurs over \s+ in order to disallow 'white space' name for actor or usescase
             elif re.match(".*\s+-uses-\s+.*", SUCNLine):
-                line_split = re.split("\s+",SUCNLine)
-                a1 = self.__modelio_factory.get_actor(line_split[0])
-                u2 = self.__modelio_factory.get_usecase(line_split[2])
-                self.__modelio_factory.create_communication_link(a1,u2)
+                self.__translate_relation(SUCNLine,"uses")
             elif re.match(".*\s+-islinkedto-\s+.*", SUCNLine):
-                line_split = re.split("\s+",SUCNLine)
-                u1 = self.__modelio_factory.get_usecase(line_split[0])
-                u2 = self.__modelio_factory.get_usecase(line_split[2])
-                self.__modelio_factory.create_communication_link(u1,u2)
+                self.__translate_relation(SUCNLine,"islinkedto")
             elif re.match(".*\s+-isparentof-\s+.*", SUCNLine):
-                line_split = re.split("\s+",SUCNLine)
-                a1 = self.__modelio_factory.get_actor(line_split[0])
-                a2 = self.__modelio_factory.get_actor(line_split[2])
-                self.__modelio_factory.create_extends_dependency_between_actors(a2,a1)
+                self.__translate_relation(SUCNLine,"isparentof")
             elif re.match(".*\s+-extends-\s+.*", SUCNLine):
-                line_split = re.split("\s+",SUCNLine)
-                u1 = self.__modelio_factory.get_usecase(line_split[0])
-                u2 = self.__modelio_factory.get_usecase(line_split[2])
-                self.__modelio_factory.create_extends_dependency_between_usecases(u1,u2)
+                self.__translate_relation(SUCNLine,"extends")
             elif re.match(".*\s+-includes-\s+.*", SUCNLine):
-                line_split = re.split("\s+",SUCNLine)
-                u1 = self.__modelio_factory.get_usecase(line_split[0])
-                u2 = self.__modelio_factory.get_usecase(line_split[2])
-                self.__modelio_factory.create_includes_dependency_between_usecases(u1,u2)
+                self.__translate_relation(SUCNLine,"includes")
             elif re.match("usecase\s+.*", SUCNLine):
-                usecase_name = re.split("\s+",SUCNLine)[1]
-                self.__modelio_factory.get_usecase(usecase_name)
+                for i in range (1,len(re.split("\s+",SUCNLine)),1):
+                    usecase_name = re.split("\s+",SUCNLine)[i]
+                    self.__modelio_factory.get_usecase(usecase_name)
             elif re.match("actor\s+.*", SUCNLine):
-                actor_name = re.split("\s+",SUCNLine)[1]
-                self.__modelio_factory.get_actor(actor_name)
+                for i in range (1,len(re.split("\s+",SUCNLine)),1):
+                    actor_name = re.split("\s+",SUCNLine)[i]
+                    self.__modelio_factory.get_actor(actor_name)
+
+    def __translate_relation(self,SUCNLine,optype):
+        """
+            translate a line into a relation
+            optype is the type of relation could be : extends uses includes isparentof islinkedto
+        """
+        operator_index = 0
+        line_split = re.split("\s+",SUCNLine)
+        #operator index find
+        for i in range(0,len(line_split),1):
+            if(line_split[i]=="-"+optype+"-"):
+                operator_index = i
+                #retrieve left operand
+                left = []
+                for i in range(0,operator_index,1):
+                    left.append(line_split[i])
+
+                #retrieve right operand
+                right = []
+                for i in range(operator_index+1,len(line_split),1):
+                    right.append(line_split[i])
+
+                #for each left create a link with a right
+                for left_element in left:
+                    for right_element in right:
+                        if(optype=="includes"):
+                            u1 = self.__modelio_factory.get_usecase(left_element)
+                            u2 = self.__modelio_factory.get_usecase(right_element)
+                            self.__modelio_factory.create_includes_dependency_between_usecases(u1,u2)
+                        elif(optype=="uses"):
+                            a1 = self.__modelio_factory.get_actor(left_element)
+                            u2 = self.__modelio_factory.get_usecase(right_element)
+                            self.__modelio_factory.create_communication_link(a1,u2)
+                        elif(optype=="extends"):
+                            u1 = self.__modelio_factory.get_usecase(left_element)
+                            u2 = self.__modelio_factory.get_usecase(right_element)
+                            self.__modelio_factory.create_extends_dependency_between_usecases(u1,u2)
+                        elif(optype=="isparentof"):
+                            a1 = self.__modelio_factory.get_actor(left_element)
+                            a2 = self.__modelio_factory.get_actor(right_element)
+                            self.__modelio_factory.create_extends_dependency_between_actors(a2,a1)
+                        elif(optype=="islinkedto"):
+                            u1 = self.__modelio_factory.get_usecase(left_element)
+                            u2 = self.__modelio_factory.get_usecase(right_element)
+                            self.__modelio_factory.create_communication_link(u1,u2)
+
 
 class ModelioFactory(object):
     """ 
@@ -269,18 +307,7 @@ class ModelioFactory(object):
         """
             create a communication link between two entity which could be actor or usecase
         """
-        associationEnd = self.__UML_factory.createAssociationEnd()
-        associationEnd.setSource(entity1)
-        associationEnd.setTarget(entity2)
-        associationEnd.setAssociation(self.__UML_factory.createAssociation())
-        associationEnd2 = self.__UML_factory.createAssociationEnd()
-        associationEnd2.setSource(entity2)
-        associationEnd2.setTarget(entity1)
-        associationEnd2.setAssociation(self.__UML_factory.createAssociation())
-        
-        associationEnd.setOppositeOwner(associationEnd2)
-        associationEnd2.setOppositeOwner(associationEnd)
-        return associationEnd
+        return self.__UML_factory.createAssociation(entity1,entity2,"")
 
     def clean_content(self):
         self.__actors   = {}

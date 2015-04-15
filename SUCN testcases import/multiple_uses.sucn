@@ -1,0 +1,3 @@
+--multiple uses
+-- each right part of -uses- uses all left part of -uses-
+a b c -uses- d e f

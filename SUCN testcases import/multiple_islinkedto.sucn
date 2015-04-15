@@ -1,0 +1,3 @@
+--multiple islinkedto
+-- each right part of -islinkedto- is linked to all left part of -islinkedto-
+a b c -islinkedto- d e f

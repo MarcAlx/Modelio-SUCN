@@ -13,3 +13,9 @@ UC1 -islinkedto- uC2
 A1 -isparentof- A2
 
 --a actor A2
+
+a b c -uses- z x y
+
+usecases r s t
+
+p -isparentof- o i

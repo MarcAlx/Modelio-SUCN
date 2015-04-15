@@ -1,0 +1,3 @@
+--multiple extends
+-- each right part of -extends- extends all left part of -extends-
+a b c -extends- d e f

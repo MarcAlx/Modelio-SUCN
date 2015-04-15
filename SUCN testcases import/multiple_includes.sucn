@@ -1,0 +1,3 @@
+--multiple includes
+-- each left part of -includes- include all right part of -includes-
+a b c -includes- d e f

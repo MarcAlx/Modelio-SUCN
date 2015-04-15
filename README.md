@@ -68,7 +68,9 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 ##7. Usage - export .sucn file
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
-- Clic on export
+- Clic on "Export selected package to .sucn file"
+NB : if you select something else than a package or more than one package you will get a pop up like this :
+- ![alt text](screenshots/popup.png "pop warning")
 
 ##8. Grammar
 | Purpose                                          | Grammar                                        | Example             |
@@ -82,9 +84,27 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 | usecase inheritance                              | (usecase-name) -extends- (usecase-name)        | U1 -extends- U2     |
 | comments ((inside code) not processed)           | --(comment-text)                               | --a comment         |
 
-NB : Actors and Usecases are dynamically created as they are declared, if they are not created via 
+NB : 
+- A space is required between operands and operator
+- Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
 'actor (actor-name)'  or 'usecase (usecase-name)'
+```
+- You can declare multiple actors or usecases where there is (actor-name) or (usecase-name). Just seprarate them by space
+```
+--example
+a b c -islinkedto- d e f
+--this will link a to d e f, b to d e f, c to d e f
+```
+```
+--example
+a -islinkedto- d e f
+--this will link a to d e f
+```
+```
+--example
+actor a1 a2
+--this will created 2 actors a1 and a2
 ```
 
 ##9. SUCN import testcases
@@ -98,6 +118,11 @@ Some testcases are provided as .sucn files in folder 'SUCN testcases import':
 - usecase_extension.sucn -> usecase extends another useace
 - usecase_inclusion.sucn -> usecase includes antoher usecase
 - usecases_link.sucn -> usecase is link to another usecase
+- multiple_uses.sucn -> multiple actor use multiple usecase
+- multiple_isparentof.sucn -> multiple actor are parent of multiple actors
+- multiple_islinkedto.sucn -> multiple usecases are linked to multiple usecases
+- multiple_includes.sucn -> multiple usescases includes multiple usecases
+- multiple_extends.sucn -> multiple usescases extends multiple usecases
 
 ##10. Screenshot
 - A translatation via user input :
