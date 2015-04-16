@@ -76,14 +76,14 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 - ![alt text](screenshots/popup.png "pop warning")
 
 ##8. SUCN Grammar
-**/!\ (actor-name) or (usecase-name) must not contains spaces**
+**/!\ (actor-name) or (usecase-name) must not contains spaces both in SUCN or in Modelio**
 
 | Purpose                                          | Grammar                                        | Example             |
 |--------------------------------------------------|------------------------------------------------|---------------------|
 | actor creation                                   | actor (actor-name)                             | actor A1            |
 | actor inheritance                                | (actor-name) -isparentof- (actor-name)       | A1 -isparentof- A2  |
-| actor uses a usecase        (communication link) | (actor-name) -uses- (usecase-name)             | A1 -uses- U2        |
-| usecase linked to a usecase (communication link) | (usecase-name) -islinkedto- (usecase-name)     | U1 -islinkedto- U2  |
+| actor uses a usecase | (actor-name) -uses- (usecase-name)             | A1 -uses- U2        |
+| usecase linked to a usecase | (usecase-name) -islinkedto- (usecase-name)     | U1 -islinkedto- U2  |
 | usecase creation                                 | usecase (usecase-ame)                          | usecase U1          |
 | usecase inclusion                                | (usecase-name) -includes- (usecase-name)       | U1 -includes- U2    |
 | usecase inheritance                              | (usecase-name) -extends- (usecase-name)        | U1 -extends- U2     |
@@ -111,6 +111,7 @@ a -islinkedto- d e f
 actor a1 a2
 --this will created 2 actors a1 and a2
 ```
+- In modelio 'actor uses a usecase' and 'usecase linked to a usecase' will be represented with a communication link
 
 ##9. SUCN import testcases
 Some import testcases are provided as .sucn files in folder 'SUCN testcases import':
