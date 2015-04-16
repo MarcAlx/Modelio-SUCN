@@ -33,7 +33,8 @@ in files :
 - export.py for export
 - .catalog for menu configuration
 
-##5. Usage - Modelio setup
+##5 Usage
+###5.1 Modelio setup
 **/!\ do not press 'Import' before project selection. If you do this you will get an exception and you won't be able to import SUCN unless you restart Modelio**
 - Launch Modelio
 - File menu -> switch workspace
@@ -47,7 +48,7 @@ The workspace cames with a project called 'UseCases' you can use it or create yo
 
 When you make an import procedure a package called 'SUCN Package' will be created, the module also creates a use case diagram in order to allow drag n drop of the created elements in order to visualize results.
 
-##6. Usage - import
+###5.2. import
 - Click on import, a window will open
 - ![alt text](screenshots/mw.png "mainwindow screenshot")
 
@@ -55,29 +56,30 @@ In this window you will have two ways of translation :
 - Import a file
 - Write SUCN instructions in textarea
 
-###6.1 Import a file
+####5.2.1 Import a file
 **/!\ all existing content inside 'SUCN Package' will be deleted**
 - Press 'import .sucn file button'
 - Choose a .sucn file (extension must be .sucn)
 - ![alt text](screenshots/fd.png "filedialog sreenshot")
 
-###6.2 Write SUCN instructions
+####5.2.2 Write SUCN instructions
 **/!\ all existing content inside 'SUCN Package' will be deleted**
 - Write code inside textarea (one instruction a line)
 - Then press 'Translate'
 
 NB : You can also save your inputs in order to use it later via 'save as .sucn' button
 
-##7. Usage - export .sucn file
+###5.3 export to .sucn file
 - Create a use case diagram via modelio
 - Select the package that contains the diagram
 - Clic on "Export selected package to .sucn file"
-- NB : if you select something else than a package or more than one package you will get a pop up like this :
+
+NB : 
+- Actor and UseCase in Modelio, must not contains space into their names.
+- if you select something else than a package or more than one package you will get a pop up like this :
 - ![alt text](screenshots/popup.png "pop warning")
 
-##8. SUCN Grammar
-**/!\ (actor-name) or (usecase-name) must not contains spaces both in SUCN or in Modelio**
-
+##6. SUCN Grammar
 | Purpose                                          | Grammar                                        | Example             |
 |--------------------------------------------------|------------------------------------------------|---------------------|
 | actor creation                                   | actor (actor-name)                             | actor A1            |
@@ -91,6 +93,7 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 
 NB : 
 - A space is required between operands and operator
+- (actor-name) or (usecase-name) must not contains spaces
 - Actors and Usecases are dynamically created as they are declared, if they are not created via 
 ```
 'actor (actor-name)'  or 'usecase (usecase-name)'
@@ -111,9 +114,19 @@ a -islinkedto- d e f
 actor a1 a2
 --this will created 2 actors a1 and a2
 ```
-- In modelio 'actor uses a usecase' and 'usecase linked to a usecase' will be represented with a communication link
 
-##9. SUCN import testcases
+##7. Mapping SUCN/Modelio
+|SUCN relation|Modelio relation|
+|--------------|----------------|
+|-uses-|communication link|
+|-islinkedto-|communication link|
+|-isparent-of|generalization|
+|-includes-|inclusion relationship|
+|-extends-|extension relationship|
+
+##8.Testcases
+
+###8.1 SUCN import testcases
 Some import testcases are provided as .sucn files in folder 'SUCN testcases import':
 - actor_creation.scn -> actor creation
 - actor_extension.sucn -> actor extension
@@ -130,7 +143,7 @@ Some import testcases are provided as .sucn files in folder 'SUCN testcases impo
 - multiple_includes.sucn -> multiple usescases includes multiple usecases
 - multiple_extends.sucn -> multiple usescases extends multiple usecases
 
-##10. SUCN export testcases
+###8.2 SUCN export testcases
 Some export testcases are provided as a modelio project : 'export-testcases', try export on packages :
 - actor_creation -> actor creation
 - actor_extension -> actor extension
@@ -143,6 +156,6 @@ Some export testcases are provided as a modelio project : 'export-testcases', tr
 
 NB : .sucn files generated from these testcases are provided as examples inside : 'SUCN generated from export_testcases' folder.
 
-##11. Screenshot
+##9. Screenshot
 - A translatation via user input :
 - ![alt text](screenshots/sample1.png "sample 1")
