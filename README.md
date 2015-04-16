@@ -65,6 +65,7 @@ In this window you will have two ways of translation :
 **/!\ all existing content inside 'SUCN Package' will be deleted**
 - Write code inside textarea (one instruction a line)
 - Then press 'Translate'
+
 NB : You can also save your inputs in order to use it later via 'save as .sucn' button
 
 ##7. Usage - export .sucn file
