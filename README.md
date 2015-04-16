@@ -120,7 +120,7 @@ actor a1 a2
 |--------------|----------------|
 |-uses-|communication link|
 |-islinkedto-|communication link|
-|-isparent-of|generalization|
+|-isparentof-|generalization|
 |-includes-|inclusion relationship|
 |-extends-|extension relationship|
 
