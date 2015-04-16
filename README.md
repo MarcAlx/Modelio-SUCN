@@ -3,6 +3,8 @@ SUCN stands for Simple Use Case Notation. It's a simple language made to improve
 - the creation of usecases via SUCN inside Modelio
 - the translation of existing usecases inside Modelio into SUCN.
 
+SUCN grammar is provided in section 8.
+
 ##0. Base project
 This project is based on :
 - https://github.com/megaplanet/Modelio3WorkspaceGenOCL-G99 by https://github.com/megaplanet
@@ -72,11 +74,13 @@ NB : You can also save your inputs in order to use it later via 'save as .sucn' 
 - NB : if you select something else than a package or more than one package you will get a pop up like this :
 - ![alt text](screenshots/popup.png "pop warning")
 
-##8. Grammar
+##8. SUCN Grammar
+**/!\ (actor-name) or (usecase-name) must not contains spaces**
+
 | Purpose                                          | Grammar                                        | Example             |
 |--------------------------------------------------|------------------------------------------------|---------------------|
 | actor creation                                   | actor (actor-name)                             | actor A1            |
-| actor inheritance                                | (actorA-name) -isparentof- (actorB-name)       | A1 -isparentof- A2  |
+| actor inheritance                                | (actor-name) -isparentof- (actor-name)       | A1 -isparentof- A2  |
 | actor uses a usecase        (communication link) | (actor-name) -uses- (usecase-name)             | A1 -uses- U2        |
 | usecase linked to a usecase (communication link) | (usecase-name) -islinkedto- (usecase-name)     | U1 -islinkedto- U2  |
 | usecase creation                                 | usecase (usecase-ame)                          | usecase U1          |
@@ -140,5 +144,3 @@ NB : .sucn files generated from these testcases are provided as examples inside 
 ##11. Screenshot
 - A translatation via user input :
 - ![alt text](screenshots/sample1.png "sample 1")
-
-
